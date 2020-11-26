@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { cpuUsage } from 'process';
 import { Product } from './model/product';
 import { PRODUCTS } from './model/PRODUCT_Mock';
 
@@ -14,7 +15,7 @@ export class AppComponent {
   }
 
   title = 'Zenika';
-  products: Product[] =[];
+  products: Product[];
   total: number = 0;
   stock: number = 0;
   product: Product;
@@ -24,8 +25,7 @@ export class AppComponent {
     this.total += price;
   }
   
-
-  
+ 
 
 }
 

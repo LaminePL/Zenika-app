@@ -44,7 +44,9 @@
         </div>
 
         <div class="row text-center">
-            <app-product-component [data]="products"> </app-product-component>
+            <ng-container  *ngFor= "let product of products">
+                <app-product-component   [data]="product" (productvalueEvent)="displayPrice($event)"> </app-product-component>
+            </ng-container>    
         </div>
 
     </div>

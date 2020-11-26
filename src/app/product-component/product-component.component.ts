@@ -18,10 +18,6 @@ export class ProductComponentComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  addToBasket( data: Product) {
-   
-    this.productvalueEvent.emit(data);
 
-  }
 
 }

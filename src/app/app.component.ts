@@ -14,7 +14,7 @@ export class AppComponent {
   }
 
   title = 'Zenika';
-  products: Product[];
+  products: Product[] =[];
   total: number = 0;
   stock: number = 0;
   product: Product;

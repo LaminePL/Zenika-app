@@ -20,6 +20,6 @@ export class ProductComponentComponent implements OnInit {
   }
   addToBasket( data: Product) {
        this.productvalueEvent.emit(data.price);
- }
+  }
 
 }

@@ -16,13 +16,15 @@ import{ProductService} from './services/product.service';
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localeFr from "@angular/common/locales/fr";
+import { CustomPipe } from './CustomPipe/filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     ProductComponentComponent,
-    BorderCardDirective
+    BorderCardDirective,
+    CustomPipe
   ],
   imports: [
     BrowserModule,

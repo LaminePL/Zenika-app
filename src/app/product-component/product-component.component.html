@@ -2,7 +2,7 @@
     <div  [ngClass]="lastItem()"  class="thumbnail">
         <img src={{data.photo}} alt="">
         <div class="caption">
-            <h3>{{data.title}} - {{data.price}}</h3>
+            <h3>{{data.title| uppercase}} - {{data.price |currency:'EUR':true}} </h3>
             <p>{{data.description}}</p>
             <p>
                 <button  (click)="addToBasket(data)" mat-raised-button color="primary">Ajoutez au panier</button>

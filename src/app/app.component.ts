@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
+import { provideRoutes } from '@angular/router';
 import { cpuUsage } from 'process';
 import { Product } from './model/product';
 import { PRODUCTS } from './model/PRODUCT_Mock';
+
+import{CustomerService} from './services/customer.service';
+import{ProductService} from './services/product.service';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +23,7 @@ export class AppComponent {
   total: number = 0;
   stock: number = 0;
   product: Product;
+  
 
 
   displayPrice(price: number) {

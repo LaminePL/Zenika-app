@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProductComponentComponent } from './product-component/product-component.component';
+import { BorderCardDirective } from './border-card.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    ProductComponentComponent
+    ProductComponentComponent,
+    BorderCardDirective
   ],
   imports: [
     BrowserModule,

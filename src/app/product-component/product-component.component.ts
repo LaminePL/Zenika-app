@@ -23,9 +23,13 @@ export class ProductComponentComponent implements OnInit {
   }
 
   lastItem(){
-    return{
-      'last': this.data.stock == 1
+    if (this.data.stock == 1) {
+      return 'last';
+      
     }
+    /*return{
+      'last': this.data.stock == 1
+    }*/
   }
 
 }

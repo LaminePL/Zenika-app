@@ -18,6 +18,9 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from "@angular/common/locales/fr";
 import { CustomPipe } from './CustomPipe/filter.pipe';
 
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +33,8 @@ import { CustomPipe } from './CustomPipe/filter.pipe';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [
     CustomerService,

@@ -5,14 +5,14 @@ export const PRODUCTS: Product[] = [
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         photo: "http://placehold.it/800x500",
         price: 10,
-        stock: 0
+        stock: 1
     },
     {
         title: "Product 3",
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         photo: "http://placehold.it/800x500",
         price: 30,
-        stock: 200
+        stock: 1
 
     },
     {

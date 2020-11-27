@@ -22,4 +22,10 @@ export class ProductComponentComponent implements OnInit {
        this.productvalueEvent.emit(data.price);
   }
 
+  lastItem(){
+    return{
+      'last': this.data.stock == 1
+    }
+  }
+
 }

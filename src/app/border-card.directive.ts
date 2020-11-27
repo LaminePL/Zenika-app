@@ -5,7 +5,7 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 })
 export class BorderCardDirective {
   @HostListener('mouseenter') onMouseEnter() {
-    this.setBorder('#FFA07A');
+    this.setBorder('#7b1fa2');
 
 
   }  @HostListener('mouseleave') onMouseLeave() {

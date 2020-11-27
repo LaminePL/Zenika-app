@@ -8,6 +8,9 @@ import { ProductComponentComponent } from './product-component/product-component
 import { BorderCardDirective } from './border-card.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {MatButtonModule} from '@angular/material/button';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -44,15 +44,15 @@
         </div>
 
         <div class="row text-center">
-            <ng-container  *ngFor= "let product of products">
-                <app-product-component   [data]="product" (productvalueEvent)="displayPrice($event)"> </app-product-component>
-            </ng-container>    
+            <ng-container *ngFor="let product of products">
+                <app-product-component *ngIf="product.stock >0" [data]="product" (productvalueEvent)="displayPrice($event)">
+                </app-product-component>
+            </ng-container>
         </div>
 
     </div>
 
     <hr>
-
     <footer>
         Copyright &copy; Your Website 2016
     </footer>

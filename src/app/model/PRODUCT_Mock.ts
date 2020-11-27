@@ -5,7 +5,7 @@ export const PRODUCTS: Product[] = [
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         photo: "http://placehold.it/800x500",
         price: 10,
-        stock: 1
+        stock: 0
     },
     {
         title: "Product 3",

@@ -19,6 +19,8 @@ import localeFr from "@angular/common/locales/fr";
 import { CustomPipe } from './CustomPipe/filter.pipe';
 
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { BasketComponent } from './basket/basket.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
     MenuComponent,
     ProductComponentComponent,
     BorderCardDirective,
-    CustomPipe
+    CustomPipe,
+    HomeComponent,
+    BasketComponent
   ],
   imports: [
     BrowserModule,

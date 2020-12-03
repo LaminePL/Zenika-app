@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Product } from './model/product'
+import { Product } from '../model/product'
 
 @Pipe({
   name: 'customPipe'

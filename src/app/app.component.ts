@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { provideRoutes } from '@angular/router';
-import { cpuUsage } from 'process';
 import { Product } from './model/product';
 import { PRODUCTS } from './model/PRODUCT_Mock';
 
@@ -12,25 +11,33 @@ import{ProductService} from './services/product.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  constructor() {
-    this.products = PRODUCTS;
-
-  }
-
+export class AppComponent implements OnInit {
+  
   title = 'Zenika';
-  products: Product[];
+  products: Product[] =[];
   total: number = 0;
   stock: number = 0;
   product: Product;
+  baskets: Product[] = [];
   
+ constructor(private productService: ProductService ,  private customerService: CustomerService) {
+   
+  }
+  ngOnInit(): void {
+    this.productService.getProducts().subscribe(products =>  this.products = products)
+    this.customerService.getBasket().subscribe(products => this.baskets = products)
+  
+  }
+ 
 
-
+  addProduct(product:Product){
+    this.customerService.addProduct(product).subscribe(res => { console.log(res)})
+  }
   displayPrice(price: number) {
     this.total += price;
   }
   
- 
+
 
 }
 

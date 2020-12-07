@@ -21,7 +21,19 @@ import { CustomPipe } from './CustomPipe/filter.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { BasketComponent } from './basket/basket.component';
+import { RouterModule, Routes } from '@angular/router';
 
+import { CustomerformComponent } from './customerform/customerform.component';
+import { FormsModule } from '@angular/forms';
+
+import { ReactiveFormsModule } from '@angular/forms';
+import { TemplateformComponent } from './templateform/templateform.component';
+
+
+export const routes: Routes = [
+  { path: '', component: HomeComponent }, 
+  { path: 'basket', component: BasketComponent },
+  ];
 
 @NgModule({
   declarations: [
@@ -31,14 +43,20 @@ import { BasketComponent } from './basket/basket.component';
     BorderCardDirective,
     CustomPipe,
     HomeComponent,
-    BasketComponent
+    BasketComponent,
+    TemplateformComponent,
+    CustomerformComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     CustomerService,

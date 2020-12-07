@@ -17,7 +17,6 @@ export class ProductService {
 
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.url_api + '/products');
-    //return PRODUCTS;
   }
   isTheLast(product:Product){
     return product.stock ===1;

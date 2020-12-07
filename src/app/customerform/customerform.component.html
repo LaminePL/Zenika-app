@@ -1,0 +1,20 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+    <label>
+        First Name:
+        <input type="text" formControlName="name">
+    </label>
+
+    <label>
+        adress:
+        <input type="text" formControlName="adress">
+    </label>
+
+    <label>
+        Credut Card :
+        <input type="text" formControlName="creditCard">
+    </label>
+
+    <button type="submit" [disabled]="!profileForm.valid" class="btn btn-primary">Submit</button>
+
+</form>

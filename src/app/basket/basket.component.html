@@ -1,1 +1,22 @@
-<p>basket works!</p>
+<app-menu></app-menu>
+<div class="row">
+    <div class="col-lg-12">
+        <h2>Votre panier</h2>
+    </div>
+</div>
+
+<div class="row text-center">
+    <ng-container *ngFor="let product of products">
+        <div class="col-md-3 col-sm-6 hero-feature" appBorderCard>
+            <div class="thumbnail">
+                <img src={{product.photo}} alt="">
+                <div class="caption">
+                    <h3>{{product.title| uppercase}} - {{product.price |currency:'EUR':true}} </h3>
+                    <p>{{product.description}}</p>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
+
+<app-templateform></app-templateform>

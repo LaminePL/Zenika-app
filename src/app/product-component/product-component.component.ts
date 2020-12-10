@@ -9,6 +9,7 @@ import { Product } from '../model/product';
 })
 export class ProductComponentComponent implements OnInit {
   @Input() data: Product;
+  // example observable  avec html  home.component a revoir ! 
   @Output() productvalueEvent = new EventEmitter<Product>();
 
 

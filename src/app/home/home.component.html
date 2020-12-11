@@ -17,7 +17,7 @@
 
         <div class="row text-center">
             <ng-container *ngFor="let product of products | FilterPipe">
-                <app-product-component *ngIf="product.stock >0" [data]="product" (productvalueEvent)="addProduct($event)" [data]="product" >
+                <app-product-component *ngIf="product.stock >0" [data]="product" (productvalueEvent)="addProduct($event)">
                 </app-product-component>
             </ng-container>
         </div>

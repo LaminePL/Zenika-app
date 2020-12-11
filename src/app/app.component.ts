@@ -17,7 +17,6 @@ export class AppComponent implements OnInit {
   products: Product[] =[];
   total: number = 0;
   stock: number = 0;
-  product: Product;
   baskets: Product[] = [];
   
  constructor(private productService: ProductService ,  private customerService: CustomerService) {

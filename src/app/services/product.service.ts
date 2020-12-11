@@ -19,7 +19,7 @@ export class ProductService {
     return this.http.get<Product[]>(this.url_api + '/products');
   }
   isTheLast(product:Product){
-    return product.stock ===1;
+    return product.stock ==1;
   }
   isAvailable(product: Product) {
     return product.stock !== 0;

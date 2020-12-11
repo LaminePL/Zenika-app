@@ -11,12 +11,6 @@ export class FilterPipe implements PipeTransform {
     products.sort((a, b) => {
       return a.title.localeCompare(b.title);
     });
-
-    // comparaison de prix price 
-    // transform(products: Product[]): Product[] {
-    //  products.sort( (a, b) => {
-    //    return a.price - b.price;
-    //  });
     return products;
 
 

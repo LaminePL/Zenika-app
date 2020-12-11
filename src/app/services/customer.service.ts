@@ -18,9 +18,6 @@ export class CustomerService {
 
   getTotal() {
     this.montant = this.pannier.map(product => product.price).reduce((prev, curr) => prev + curr, 0)
-    // je recupere mon pannier avec avec les produits.
-    // avec la fonction .map() je recupere le product price de product
-    // reduce() recupere tous les price et fait prev + curr a chaque fois pour recuperer le total
   }
 
   private handleError<T>(operation = 'operation', results?: T) {
@@ -51,6 +48,3 @@ export class CustomerService {
   }
   constructor(private http: HttpClient) { }
 }
-
-//this.customerService.checkout( {name:this.profileForm.get("name")?.value, adress:this.profileForm.get("adress").value, creditCardType:this.creditCard.get('cardNumber') }).subscribe(() => this.router.navigate(['']));
-

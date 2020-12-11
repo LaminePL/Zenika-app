@@ -3,7 +3,7 @@ import { Title } from '@angular/platform-browser';
 import { Product } from '../model/product'
 
 @Pipe({
-  name: 'filterPipe'
+  name: 'FilterPipe'
 })
 export class FilterPipe implements PipeTransform {
 

@@ -16,7 +16,7 @@ import{ProductService} from './services/product.service';
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localeFr from "@angular/common/locales/fr";
-import { CustomPipe } from './CustomPipe/filter.pipe';
+import { FilterPipe } from './FilterPipe/filter.pipe';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
@@ -41,7 +41,7 @@ export const routes: Routes = [
     MenuComponent,
     ProductComponentComponent,
     BorderCardDirective,
-    CustomPipe,
+    FilterPipe,
     HomeComponent,
     BasketComponent,
     TemplateformComponent,

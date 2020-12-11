@@ -1,20 +1,25 @@
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div class="form-group col-md-6" >
+        <label>Name</label>
+        <input type="text" id="name" class="form-control" placeholder="Lamine"  formControlName="name"/>
+    </div>
+    <div>
+        <div class="form-group col-md-6">
+            <label for="inputAddress">adress</label>
+            <input type="text" class="form-control" name="adress" id="adress"  formControlName="adress" >
+        </div>
+    </div>
+    <div>
+        <div class="form-group col-md-6">
+            <label for="inputAddress">Credit Card </label>
+            <input type="text" class="form-control" placeholder="1234 5678 91011" name="creditCardType" 
+            formControlName="creditCard">
 
-    <label>
-        First Name:
-        <input type="text" formControlName="name">
-    </label>
+        </div>
+    </div>
 
-    <label>
-        adress:
-        <input type="text" formControlName="adress">
-    </label>
 
-    <label>
-        Credut Card :
-        <input type="text" formControlName="creditCard">
-    </label>
-
-    <button type="submit" [disabled]="!profileForm.valid" class="btn btn-primary">Submit</button>
-
+    <button type="submit" [disabled]="!profileForm.valid" class="btn btn-success pull-right">
+        Validate
+    </button>
 </form>

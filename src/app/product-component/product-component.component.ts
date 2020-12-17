@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { EventEmitter, Output } from '@angular/core';
-import { Product } from '../model/product';
+import {Component, OnInit, Input} from '@angular/core';
+import {EventEmitter, Output} from '@angular/core';
+import {Product} from '../model/product';
 
 @Component({
   selector: 'app-product-component',
@@ -9,28 +9,16 @@ import { Product } from '../model/product';
 })
 export class ProductComponentComponent implements OnInit {
   @Input() data: Product;
-  // example observable  avec html  home.component a revoir ! 
+  // example observable  avec html  home.component a revoir !
   @Output() productvalueEvent = new EventEmitter<Product>();
-
 
   constructor() {
   }
 
   ngOnInit(): void {
-
-  }
-  addToBasket( data: Product) {
-       this.productvalueEvent.emit(data);
   }
 
-  lastItem(){
-   /* if (this.data.stock == 1) {
-      return 'last';
-      
-    }*/
-    return{
-      'last': this.data.stock == 1
-    }
+  addToBasket(data: Product) {
+    this.productvalueEvent.emit(data);
   }
-
 }

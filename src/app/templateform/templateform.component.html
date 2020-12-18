@@ -1,0 +1,26 @@
+<form #customerForm="ngForm" (submit)="checkout()" novalidate>
+    <div class="form-group col-md-6" [class.has-error]="!name.valid">
+        <label>Name</label>
+        <input type="text" id="name" class="form-control" placeholder="Lamine" name="name" [(ngModel)]="customer.name" #name="ngModel" required />
+    </div>
+    <div>
+        <div class="form-group col-md-6" [class.has-error]="!adress.valid">
+            <label for="inputAddress">adress</label>
+            <input type="text" class="form-control" name="adress" id="adress" [(ngModel)]="customer.adress" #adress="ngModel" required>
+        </div>
+    </div>
+    <div>
+        <div class="form-group col-md-6" [class.has-error]="!creditCardType.valid">
+            <label for="inputAddress">Credit Card </label>
+            <input type="text" class="form-control" placeholder="1234 5678 91011" name="creditCardType"
+            pattern="^[0-9]{3}-[0-9]{3}$" [(ngModel)]="customer.creditCardType" #creditCardType="ngModel" required>
+                <span class="help-block" [hidden]="creditCardType.valid"> Example : 123-456</span>
+
+        </div>
+    </div>
+
+
+    <button type="submit" class="btn btn-success pull-right" [disabled]="customerForm.invalid">
+        Validate
+    </button>
+</form>

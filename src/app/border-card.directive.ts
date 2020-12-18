@@ -1,4 +1,4 @@
-import {Directive, ElementRef, HostListener, Renderer2} from '@angular/core';
+import { Directive, ElementRef, HostListener, Renderer2, HostBinding } from '@angular/core';
 
 @Directive({
   selector: '[appBorderCard]'
@@ -7,13 +7,14 @@ import {Directive, ElementRef, HostListener, Renderer2} from '@angular/core';
 export class BorderCardDirective {
   constructor(private el: ElementRef, private rendrer: Renderer2) {
   }
-
+  @HostBinding('class.colored-border') border: boolean;
   @HostListener('mouseenter') onMouseEnter() {
-    this.rendrer.addClass(this.el.nativeElement, 'colored-border');
+    this.border = true;
+    // this.rendrer.addClass(this.el.nativeElement, 'colored-border');
   }
 
   @HostListener('mouseleave') onMouseLeave() {
-    this.rendrer.removeClass(this.el.nativeElement, 'colored-border');
-    this.rendrer.addClass(this.el.nativeElement, 'border');
+    this.border = false;
+    // this.rendrer.removeClass(this.el.nativeElement, 'colored-border');
   }
 }

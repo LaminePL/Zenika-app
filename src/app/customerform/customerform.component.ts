@@ -1,17 +1,15 @@
-import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
-import {Validators} from '@angular/forms';
-import {FormArray} from '@angular/forms';
-import {Router} from '@angular/router';
-import {Customer} from '../model/customer';
-import {CustomerService} from '../services/customer.service';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Customer } from '../model/customer';
+import { CustomerService } from '../services/customer.service';
 
 @Component({
   selector: 'app-customerform',
   templateUrl: './customerform.component.html',
   styleUrls: ['./customerform.component.css']
 })
-export class CustomerformComponent implements OnInit {
+export class CustomerformComponent {
   customer: Customer;
 
   profileForm = new FormGroup({
@@ -20,10 +18,7 @@ export class CustomerformComponent implements OnInit {
     creditCard: new FormControl('', Validators.pattern('^[0-9]{3}-[0-9]{3}$')),
   });
 
-  constructor(private fb: FormBuilder, private customerService: CustomerService, private router: Router) {
-  }
-
-  ngOnInit(): void {
+  constructor(private customerService: CustomerService, private router: Router) {
   }
 
   onSubmit() {

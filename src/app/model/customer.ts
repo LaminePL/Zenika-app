@@ -3,4 +3,3 @@ export class Customer {
     adress: string;
     creditCardType: string;
 }
-

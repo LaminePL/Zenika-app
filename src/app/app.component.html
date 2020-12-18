@@ -3,29 +3,30 @@
 <meta charset="UTF-8">
 
 <head>
-    <style>
-        body {
-            padding-top: 70px;
-        }
+  <style>
+    body {
+      padding-top: 70px;
+    }
 
-        .hero-spacer {
-            margin-top: 50px;
-        }
+    .hero-spacer {
+      margin-top: 50px;
+    }
 
-        .hero-feature {
-            margin-bottom: 30px;
-        }
+    .hero-feature {
+      margin-bottom: 30px;
+    }
 
-        footer {
-            margin: 50px 0;
-        }
-    </style>
+    footer {
+      margin: 50px 0;
+    }
+  </style>
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <router-outlet></router-outlet>
+  <app-menu></app-menu>
+  <router-outlet></router-outlet>
 </body>
 
 </html>

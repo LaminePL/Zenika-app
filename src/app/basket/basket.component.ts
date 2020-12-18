@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { provideRoutes } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Product } from '../model/product';
-import { PRODUCTS } from '../model/PRODUCT_Mock';
-
-import{CustomerService} from '../services/customer.service';
-import{ProductService} from '../services/product.service';
+import { CustomerService } from '../services/customer.service';
 
 @Component({
   selector: 'app-basket',
@@ -12,13 +9,10 @@ import{ProductService} from '../services/product.service';
   styleUrls: ['./basket.component.css']
 })
 export class BasketComponent implements OnInit {
-  products: Product[]= [];
-
-  constructor(  private customerService: CustomerService) { }
+  products$: Observable<Product[]>;
+  constructor(private customerService: CustomerService) { }
 
   ngOnInit(): void {
-    this.customerService.getBasket().subscribe(products => this.products = products)
-
+    this.products$ = this.customerService.getBasket();
   }
-
 }

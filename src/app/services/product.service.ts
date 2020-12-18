@@ -18,17 +18,13 @@ export class ProductService {
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.url_api + '/products');
   }
-  isTheLast(product:Product){
-    return product.stock ==1;
+  isTheLast(product: Product) {
+    return product.stock === 1;
   }
   isAvailable(product: Product) {
     return product.stock !== 0;
-
   }
-  decreaseStock(product: Product){
-    product.stock = product.stock -1;
-
+  decreaseStock(product: Product) {
+    product.stock = product.stock - 1;
   }
-
-
 }

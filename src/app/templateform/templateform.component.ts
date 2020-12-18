@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Customer } from '../model/customer';
 import { Product } from '../model/product';
-import { ProductComponentComponent } from '../product-component/product-component.component';
 import { CustomerService } from '../services/customer.service';
 
 @Component({
@@ -14,8 +12,8 @@ import { CustomerService } from '../services/customer.service';
 export class TemplateformComponent implements OnInit {
   customer: Customer;
   basket: Product[];
-  
-  constructor( private customerService: CustomerService,  private router: Router) { 
+
+  constructor(private customerService: CustomerService, private router: Router) {
     this.customer = new Customer();
   }
 
@@ -23,10 +21,7 @@ export class TemplateformComponent implements OnInit {
     this.customerService.getBasket().subscribe(products => this.basket = products);
   }
 
-  checkout(){
+  checkout() {
     this.customerService.checkout(this.customer).subscribe(() => this.router.navigate(['']));
   }
 }
-
-
-
